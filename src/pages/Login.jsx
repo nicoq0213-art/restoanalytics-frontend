@@ -6,8 +6,9 @@ export default function Login() {
   const { login } = useAuth()
   const navigate   = useNavigate()
   const [form, setForm]     = useState({ username: '', password: '' })
-  const [loading, setLoading] = useState(false)
-  const [error, setError]   = useState('')
+  const [loading, setLoading]   = useState(false)
+  const [error, setError]       = useState('')
+  const [showPass, setShowPass] = useState(false)
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -79,13 +80,34 @@ export default function Login() {
 
           <div className="field">
             <label>Contraseña</label>
-            <input
-              type="password"
-              placeholder="••••••••"
-              value={form.password}
-              onChange={e => setForm(p => ({ ...p, password: e.target.value }))}
-              required
-            />
+            <div style={{ position: 'relative' }}>
+              <input
+                type={showPass ? 'text' : 'password'}
+                placeholder="••••••••"
+                value={form.password}
+                onChange={e => setForm(p => ({ ...p, password: e.target.value }))}
+                required
+                style={{ paddingRight: 44 }}
+              />
+              <button
+                type="button"
+                onClick={() => setShowPass(p => !p)}
+                style={{
+                  position: 'absolute',
+                  right: 10,
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontSize: 20,
+                  lineHeight: 1,
+                  padding: 2,
+                }}
+              >
+                {showPass ? '🙉' : '🙈'}
+              </button>
+            </div>
           </div>
 
           {error && (
