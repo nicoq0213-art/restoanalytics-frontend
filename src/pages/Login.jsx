@@ -36,14 +36,7 @@ export default function Login() {
     }}>
       {/* Logo */}
       <div style={{ textAlign: 'center', marginBottom: 32 }}>
-        <div style={{
-          width: 72, height: 72,
-          borderRadius: '50%',
-          background: 'rgba(255,255,255,0.22)',
-          border: '2px solid rgba(255,255,255,0.5)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: 36, margin: '0 auto 14px',
-        }}>🍕</div>
+        <img src="/logo.png" width="80" height="80" alt="Resto Analytics" style={{ borderRadius: '16px', margin: '0 auto 14px', display: 'block' }} />
         <h1 style={{ color: '#fff', fontSize: 26, fontWeight: 800, letterSpacing: '-.02em' }}>
           Resto Analytics
         </h1>
