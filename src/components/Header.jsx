@@ -18,13 +18,7 @@ export default function Header({ title }) {
     }}>
       {/* Logo + título */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <div style={{
-          width: 32, height: 32,
-          borderRadius: '50%',
-          background: 'rgba(255,255,255,0.22)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontWeight: 800, fontSize: 16, color: '#fff',
-        }}>R</div>
+        <img src="/logo.png" width="36" height="36" alt="logo" style={{ borderRadius: '8px' }} />
         <div>
           <div style={{ color: '#fff', fontWeight: 700, fontSize: 15, lineHeight: 1.1 }}>
             {title || 'Resto Analytics'}
