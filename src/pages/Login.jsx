@@ -130,7 +130,7 @@ export default function Login() {
         </form>
 
         <p style={{ textAlign: 'center', fontSize: 12, color: 'var(--text-muted)', marginTop: 18 }}>
-          Resto Analytics v1.0 · Powered by Railway
+          Un producto de NexBoards Analytics
         </p>
       </div>
     </div>
